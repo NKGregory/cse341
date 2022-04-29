@@ -1,0 +1,19 @@
+//LOCALHOST
+GET http://localhost:3000/contacts
+###
+GET http://localhost:3000/contacts/6267825a52f6102cec5db3d6
+###
+GET http://localhost:3000/contacts/626782f792967d831f272744
+###
+GET http://localhost:3000/contacts/626783367f6a3b72bc02e6ed
+###
+
+//PRODUCTION DEPLOY
+GET https://https://cse341-ngregory-w02.herokuapp.com/contacts
+###
+GET https://https://cse341-ngregory-w02.herokuapp.com/contacts/6267825a52f6102cec5db3d6
+###
+GET https://https://cse341-ngregory-w02.herokuapp.com/contacts/626782f792967d831f272744
+###
+GET https://https://cse341-ngregory-w02.herokuapp.com/contacts/626783367f6a3b72bc02e6ed
+###

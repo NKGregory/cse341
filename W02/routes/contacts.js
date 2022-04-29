@@ -1,32 +1,10 @@
-const {MongoDBNamespace} = require('mongodb');
+const express = require('express');
+const router = express.Router();
 
-const contact = new MongoDBNamespace({
-    firstName:{
-        type:String
-    },
-    lastName:{
-        type:String
-    },
-    email:{
-        type:String
-    },
-    favoriteColor:{
-        type:String
-    },
-    birthday:{
-        type:String
-    }
-});
+const contactsController = require('../controllers/contacts');
 
-module.exports = contact
+router.get('/', contactsController.getAll);
 
-routes.post('/',(req, res) => {
-    const{firstName,lastName,email,favoriteColor,birthday} = req.body;
-    let contact = {};
-    contact.firstName = firstName;
-    contact.lastName = lastName;
-    contact.email = email;
-    contact.favoriteColor = favoriteColor;
-    contact.birthday = birthday;
-    let contactModel
-})
+router.get('/:id', contactsController.getSingle);
+
+module.exports = router;
