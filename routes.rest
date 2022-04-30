@@ -9,11 +9,11 @@ GET http://localhost:3000/contacts/626783367f6a3b72bc02e6ed
 ###
 
 //PRODUCTION DEPLOY
-GET https://cse341-ngregory-w02.herokuapp.com/contacts
+GET https://cse341-ngregory.herokuapp.com/contacts
 ###
-GET https://cse341-ngregory-w02.herokuapp.com/contacts/6267825a52f6102cec5db3d6
+GET https://cse341-ngregory.herokuapp.com/contacts/6267825a52f6102cec5db3d6
 ###
-GET https://cse341-ngregory-w02.herokuapp.com/contacts/626782f792967d831f272744
+GET https://cse341-ngregory.herokuapp.com/contacts/626782f792967d831f272744
 ###
-GET https://cse341-ngregory-w02.herokuapp.com/contacts/626783367f6a3b72bc02e6ed
+GET https://cse341-ngregory.herokuapp.com/contacts/626783367f6a3b72bc02e6ed
 ###
