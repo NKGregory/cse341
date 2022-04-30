@@ -1,10 +1,12 @@
-const express = require('express');
-const router = express.Router();
+const routes = require('express').Router();
+const connect = require('../db/connect');
 
-const contactsController = require('../controllers/contacts');
+routes.get('/', (req, res) => {
+    connect.getCollection().find().toArray((err, result) => {
+        if (err) throw err;
+        res.json(result);
+        console.log('Contacts Query Successful');
+    });
+});
 
-router.get('/', contactsController.getAll);
-
-router.get('/:id', contactsController.getSingle);
-
-module.exports = router;
+module.exports = routes;
