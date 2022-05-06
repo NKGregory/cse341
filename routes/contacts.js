@@ -34,27 +34,26 @@ routes.post('/', (_req, _res) => {
         birthday: _req.body.birthday
     };
     const results = connect.getCollection().insertOne(contact);
-    const contactId = new OjectId(_req.params.id);
     results.then((documents) => {
         _res.status(201).json(documents);
-        console.log(`Added new Contact ${contactId}`)
     })
 });
 
 //Put JSON to Contact by ID
 routes.put('/:id', (_req, _res) => {
+    const putId = new OjectId(_req.params.id);
     const contact = {
-        firstName: _req.body.firstName,
-        lastName: _req.body.lastName,
-        email: _req.body.email,
-        favoriteColor: _req.body.favoriteColor,
-        birthday: _req.body.birthday
-    };
-    const results = connect.getCollection().replaceOne({ _id:_req.params.id}, contact);
+            firstName:_req.body.firstName,
+            lastName:_req.body.lastName,
+            email:_req.body.email,
+            favoriteColor:_req.body.favoriteColor,
+            birthday:_req.body.birthday
+        };
+    const results = connect.getCollection().replaceOne({ _id: putId }, contact);
     results.then((documents) => {
         _res.status(202).json(documents);
-        console.log(`Modified Contact ${_req.params.id}`);
     });
+    console.log(contact);
 });
 
 //Delete Contact by ID

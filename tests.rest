@@ -13,25 +13,25 @@ POST http://localhost:3000/contacts HTTP/1.1
 Content-Type: application/json
 
 {
-    "firstName":"Tara",
-    "lastName":"Cloward",
-    "email":"anotheroriginalemail@gmail.com",
-    "favoriteColor":"Yellow",
-    "birthday":"03-21"
+    "firstName":"Nate",
+    "lastName":"Gregory",
+    "email":"originalemail@gmail.com",
+    "favoriteColor":"Green",
+    "birthday":"03-14"
 }
 
 ###
 
 //Change Contact by ID
-PUT http://localhost:3000/contacts/62742d466ae70c0c09f2bd26 HTTP/1.1
+PUT http://localhost:3000/contacts/62746e5ef9eb21ce523f6c9e HTTP/1.1
 Content-Type: : application/json
 
 {
-    "firstName":"Tara",
-    "lastName":"Cloward",
-    "email":"anotheroriginalemail@gmail.com",
-    "favoriteColor":"Green",
-    "birthday":"03-21"
+    "firstName":"Nate",
+    "lastName":"Gregory",
+    "email":"originalemail@gmail.com",
+    "favoriteColor":"Blue",
+    "birthday":"03-14"
 }
 
 ###
@@ -40,20 +40,48 @@ Content-Type: : application/json
 DELETE http://localhost:3000/contacts/6267825a52f6102cec5db3d6 HTTP/1.1
 
 ###
+
+
+
+
+
+
 //PRODUCTION DEPLOY
+
+//Get all Contacts
 GET https://cse341-ngregory.herokuapp.com/contacts
 ###
+
+//Get Contact by ID
 GET https://cse341-ngregory.herokuapp.com/contacts/6267825a52f6102cec5db3d6
 ###
+
+//Add Contact in JSON
 POST https://cse341-ngregory.herokuapp.com/contacts HTTP/1.1
 Content-Type: application/json
 
 {
-    "firstName":"Tara",
-    "lastName":"Cloward",
-    "email":"anotheroriginalemail@gmail.com",
-    "favoriteColor":"Yellow",
-    "birthday":"03-21"
+    "firstName":"Nate",
+    "lastName":"Gregory",
+    "email":"originalemail@gmail.com",
+    "favoriteColor":"Green",
+    "birthday":"03-14"
 }
+###
 
+//Change Contact by ID
+PUT https://cse341-ngregory.herokuapp.com/contacts/62746e5ef9eb21ce523f6c9e HTTP/1.1
+Content-Type: : application/json
+
+{
+    "firstName":"Nate",
+    "lastName":"Gregory",
+    "email":"originalemail@gmail.com",
+    "favoriteColor":"Blue",
+    "birthday":"03-14"
+}
+###
+
+//Delete Contact by ID
+DELETE https://cse341-ngregory.herokuapp.com/contacts/627465a699c2a3bdb272e81c HTTP/1.1
 ###

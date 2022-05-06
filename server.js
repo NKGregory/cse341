@@ -8,10 +8,10 @@ connect.initDatatbase();
 
 app.use(bodyParser.json());
 app.use('/', require('./routes'));
-// app.use((req, res, next) => {
-//     res.setHeader('Access-Control-Allow-Origin', '*');
-//     next();
-// })
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+})
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}`)
