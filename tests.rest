@@ -61,17 +61,17 @@ POST https://cse341-ngregory.herokuapp.com/contacts HTTP/1.1
 Content-Type: application/json
 
 {
-    "firstName":"Nate",
-    "lastName":"Gregory",
+    "firstName":"Tara",
+    "lastName":"Cloward",
     "email":"originalemail@gmail.com",
     "favoriteColor":"Green",
-    "birthday":"03-14"
+    "birthday":"03-21"
 }
 ###
 
 //Change Contact by ID
 PUT https://cse341-ngregory.herokuapp.com/contacts/62746e5ef9eb21ce523f6c9e HTTP/1.1
-Content-Type: : application/json
+Content-Type: application/json
 
 {
     "firstName":"Nate",
@@ -83,5 +83,5 @@ Content-Type: : application/json
 ###
 
 //Delete Contact by ID
-DELETE https://cse341-ngregory.herokuapp.com/contacts/627465a699c2a3bdb272e81c HTTP/1.1
+DELETE https://cse341-ngregory.herokuapp.com/contacts/6275bb9a88241a090a0fb097 HTTP/1.1
 ###

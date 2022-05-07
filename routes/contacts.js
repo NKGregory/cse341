@@ -53,7 +53,6 @@ routes.put('/:id', (_req, _res) => {
     results.then((documents) => {
         _res.status(202).json(documents);
     });
-    console.log(contact);
 });
 
 //Delete Contact by ID
