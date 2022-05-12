@@ -1,4 +1,6 @@
 node_modules
 .env
+w02_team
 .eslintrc.json
 .prettierrc
+w04_team
