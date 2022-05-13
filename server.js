@@ -1,4 +1,5 @@
 const express = require ('express');
+const cors = require('cors');
 const app = express();
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 3000;
@@ -10,6 +11,7 @@ connect.initDatatbase();
 
 app
   .use('/api-docs',swaggerUI.serve, swaggerUI.setup(swaggerDocument))
+  .use(cors())
   .use(bodyParser.json())
   .use('/', require('./routes'))
   .use((req, res, next) => {
