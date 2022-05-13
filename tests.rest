@@ -63,10 +63,14 @@ Content-Type: application/json
 {
     "firstName":"Tara",
     "lastName":"Cloward",
+    "nickName":"fishLaughsAlot",
+    "phone":"555-5555",
+    "company":"Da Family",
     "email":"originalemail@gmail.com",
     "favoriteColor":"Green",
     "birthday":"03-21"
 }
+
 ###
 
 //Change Contact by ID
@@ -76,6 +80,9 @@ Content-Type: application/json
 {
     "firstName":"Nate",
     "lastName":"Gregory",
+    "nickName":"DishesMe",
+    "phone":"555-5555",
+    "company":"Da Family",
     "email":"originalemail@gmail.com",
     "favoriteColor":"Green",
     "birthday":"03-14"

@@ -29,6 +29,9 @@ routes.post('/', (_req, _res) => {
     const contact = {
         firstName: _req.body.firstName,
         lastName: _req.body.lastName,
+        nickName: _req.body.nickName,
+        phone: _req.body.phone,
+        company: _req.body.company,
         email: _req.body.email,
         favoriteColor: _req.body.favoriteColor,
         birthday: _req.body.birthday
@@ -45,6 +48,9 @@ routes.put('/:id', (_req, _res) => {
     const contact = {
             firstName:_req.body.firstName,
             lastName:_req.body.lastName,
+            nickName: _req.body.nickName,
+            phone: _req.body.phone,
+            company: _req.body.company,    
             email:_req.body.email,
             favoriteColor:_req.body.favoriteColor,
             birthday:_req.body.birthday

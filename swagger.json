@@ -43,6 +43,15 @@
                 "lastName": {
                   "example": "any"
                 },
+                "nickName": {
+                  "example": "any"
+                },
+                "phone": {
+                  "example": "any"
+                },
+                "company": {
+                  "example": "any"
+                },
                 "email": {
                   "example": "any"
                 },
@@ -99,6 +108,15 @@
                   "example": "any"
                 },
                 "lastName": {
+                  "example": "any"
+                },
+                "nickName": {
+                  "example": "any"
+                },
+                "phone": {
+                  "example": "any"
+                },
+                "company": {
                   "example": "any"
                 },
                 "email": {
