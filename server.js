@@ -3,15 +3,19 @@ const app = express();
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 3000;
 const connect = require ('./db/connect');
+const swaggerUI = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
 
 connect.initDatatbase();
 
-app.use(bodyParser.json());
-app.use('/', require('./routes'));
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    next();
-})
+app
+  .use('/api-docs',swaggerUI.serve, swaggerUI.setup(swaggerDocument))
+  .use(bodyParser.json())
+  .use('/', require('./routes'))
+  .use((req, res, next) => {
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      next()
+  })
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}`)
